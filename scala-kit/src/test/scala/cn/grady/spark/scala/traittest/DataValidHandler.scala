@@ -1,4 +1,4 @@
-package cn.grady.spark.traittest
+package cn.grady.spark.scala.traittest
 
 /**
  * @author rociss 

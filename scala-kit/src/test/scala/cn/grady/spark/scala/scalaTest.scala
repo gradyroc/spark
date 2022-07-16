@@ -1,6 +1,6 @@
 package cn.grady.spark
 
-import cn.grady.spark.traittest.Person1
+import cn.grady.spark.scala.traittest.Person1
 
 /**
  * @author rociss 

@@ -11,9 +11,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <scala.compat.version>2.11</scala.compat.version>
-        <cn.grady.spark.version>2.4.3</cn.grady.spark.version>
+        <spark.version>2.4.3</spark.version>
         <hadoop.binary.version>2.7.3</hadoop.binary.version>
-        <cn.grady.spark.scope>compile</cn.grady.spark.scope>
+        <spark.scope>compile</spark.scope>
     </properties>
 
     <dependencies>
@@ -24,32 +24,37 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.cn.grady.spark</groupId>
-            <artifactId>cn.grady.spark-core_${scala.compat.version}</artifactId>
-            <version>${cn.grady.spark.version}</version>
-            <scope>${cn.grady.spark.scope}</scope>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_${scala.compat.version}</artifactId>
+            <version>${spark.version}</version>
+            <scope>${spark.scope}</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.cn.grady.spark</groupId>
-            <artifactId>cn.grady.spark-sql_${scala.compat.version}</artifactId>
-            <version>${cn.grady.spark.version}</version>
-            <scope>${cn.grady.spark.scope}</scope>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_${scala.compat.version}</artifactId>
+            <version>${spark.version}</version>
+            <scope>${spark.scope}</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.cn.grady.spark</groupId>
-            <artifactId>cn.grady.spark-hive_${scala.compat.version}</artifactId>
-            <version>${cn.grady.spark.version}</version>
-            <scope>${cn.grady.spark.scope}</scope>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-hive_${scala.compat.version}</artifactId>
+            <version>${spark.version}</version>
+            <scope>${spark.scope}</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-actors</artifactId>
+            <version>2.11.8</version>
         </dependency>
     </dependencies>
 
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
         <testSourceDirectory>src/test/java</testSourceDirectory>
+
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
@@ -87,8 +92,8 @@
                     <includeProjectDependencies>false</includeProjectDependencies>
                     <includePluginDependencies>false</includePluginDependencies>
                     <classpathScope>compile</classpathScope>
-                    <!--  <mainClass>cn.whbing.cn.grady.spark.App</mainClass>-->
-                    <!--<mainClass>cn.whbing.cn.grady.spark.SparkApps.WordCount2</mainClass>-->
+                    <!--  <mainClass>cn.whbing.spark.App</mainClass>-->
+                    <!--<mainClass>cn.whbing.spark.SparkApps.WordCount2</mainClass>-->
 
                 </configuration>
             </plugin>
@@ -115,7 +120,6 @@
                     </execution>
                 </executions>
             </plugin>
-
 
         </plugins>
     </build>
