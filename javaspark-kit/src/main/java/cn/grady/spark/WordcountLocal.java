@@ -1,4 +1,4 @@
-package cn.grady.spark.java;
+package cn.grady.spark;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
