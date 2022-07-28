@@ -1,4 +1,4 @@
-package cn.grady.spark.wordcount
+package cn.grady.spark.core.wordcount
 
 import org.apache.spark.{SparkConf, SparkContext}
 

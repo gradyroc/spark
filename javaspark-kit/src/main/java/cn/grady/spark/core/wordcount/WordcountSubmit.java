@@ -1,4 +1,4 @@
-package cn.grady.spark;
+package cn.grady.spark.core.wordcount;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
